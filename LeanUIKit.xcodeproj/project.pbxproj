@@ -8,12 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		EA2EE7C82184E4F000ED4BD0 /* LeanUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2EE7C62184E4F000ED4BD0 /* LeanUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA2EE7D02184E73900ED4BD0 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2EE7CF2184E73900ED4BD0 /* UITextField+Extensions.swift */; };
+		EA2EE7D22184E7B800ED4BD0 /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2EE7D12184E7B800ED4BD0 /* UITextView+Extensions.swift */; };
+		EA2EE7D62184E82400ED4BD0 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2EE7D52184E82400ED4BD0 /* UIColor+Extensions.swift */; };
+		EA2EE7D82184E88F00ED4BD0 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2EE7D72184E88F00ED4BD0 /* UIButton+Extensions.swift */; };
+		EA2EE7DB2184E93700ED4BD0 /* NSLayoutAnchor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2EE7DA2184E93700ED4BD0 /* NSLayoutAnchor+Extensions.swift */; };
+		EA2EE7DD2184E99F00ED4BD0 /* NSLayoutConstraint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2EE7DC2184E99F00ED4BD0 /* NSLayoutConstraint+Extensions.swift */; };
+		EA2EE7DF2184E9BE00ED4BD0 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2EE7DE2184E9BE00ED4BD0 /* UIViewController+Extensions.swift */; };
+		EA2EE7E12184E9EF00ED4BD0 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2EE7E02184E9EF00ED4BD0 /* UIView+Extensions.swift */; };
+		EA2EE7E32184EAFC00ED4BD0 /* NSAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2EE7E22184EAFC00ED4BD0 /* NSAttributedString+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA2EE7C32184E4F000ED4BD0 /* LeanUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2EE7C62184E4F000ED4BD0 /* LeanUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanUIKit.h; sourceTree = "<group>"; };
 		EA2EE7C72184E4F000ED4BD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA2EE7CF2184E73900ED4BD0 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		EA2EE7D12184E7B800ED4BD0 /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
+		EA2EE7D52184E82400ED4BD0 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		EA2EE7D72184E88F00ED4BD0 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		EA2EE7DA2184E93700ED4BD0 /* NSLayoutAnchor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutAnchor+Extensions.swift"; sourceTree = "<group>"; };
+		EA2EE7DC2184E99F00ED4BD0 /* NSLayoutConstraint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extensions.swift"; sourceTree = "<group>"; };
+		EA2EE7DE2184E9BE00ED4BD0 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		EA2EE7E02184E9EF00ED4BD0 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		EA2EE7E22184EAFC00ED4BD0 /* NSAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,15 @@
 		EA2EE7CE2184E5B700ED4BD0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				EA2EE7CF2184E73900ED4BD0 /* UITextField+Extensions.swift */,
+				EA2EE7D12184E7B800ED4BD0 /* UITextView+Extensions.swift */,
+				EA2EE7D52184E82400ED4BD0 /* UIColor+Extensions.swift */,
+				EA2EE7D72184E88F00ED4BD0 /* UIButton+Extensions.swift */,
+				EA2EE7E02184E9EF00ED4BD0 /* UIView+Extensions.swift */,
+				EA2EE7DE2184E9BE00ED4BD0 /* UIViewController+Extensions.swift */,
+				EA2EE7DC2184E99F00ED4BD0 /* NSLayoutConstraint+Extensions.swift */,
+				EA2EE7DA2184E93700ED4BD0 /* NSLayoutAnchor+Extensions.swift */,
+				EA2EE7E22184EAFC00ED4BD0 /* NSAttributedString+Extensions.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -103,6 +130,7 @@
 				TargetAttributes = {
 					EA2EE7C22184E4F000ED4BD0 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -138,6 +166,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA2EE7DB2184E93700ED4BD0 /* NSLayoutAnchor+Extensions.swift in Sources */,
+				EA2EE7E32184EAFC00ED4BD0 /* NSAttributedString+Extensions.swift in Sources */,
+				EA2EE7DD2184E99F00ED4BD0 /* NSLayoutConstraint+Extensions.swift in Sources */,
+				EA2EE7D02184E73900ED4BD0 /* UITextField+Extensions.swift in Sources */,
+				EA2EE7DF2184E9BE00ED4BD0 /* UIViewController+Extensions.swift in Sources */,
+				EA2EE7D82184E88F00ED4BD0 /* UIButton+Extensions.swift in Sources */,
+				EA2EE7D62184E82400ED4BD0 /* UIColor+Extensions.swift in Sources */,
+				EA2EE7E12184E9EF00ED4BD0 /* UIView+Extensions.swift in Sources */,
+				EA2EE7D22184E7B800ED4BD0 /* UITextView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +306,7 @@
 		EA2EE7CC2184E4F000ED4BD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -287,6 +325,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gerh.LeanUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -295,6 +334,7 @@
 		EA2EE7CD2184E4F000ED4BD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
