@@ -80,3 +80,27 @@ extension UIView {
     }
     
 }
+
+extension UIView {
+    
+    public var horizontalHuggingPriority: UILayoutPriority {
+        get { return contentHuggingPriority(for: .horizontal) }
+        set { setContentHuggingPriority(newValue, for: .horizontal) }
+    }
+    
+    public var verticalHuggingPriority: UILayoutPriority {
+        get { return contentHuggingPriority(for: .vertical) }
+        set { setContentHuggingPriority(newValue, for: .vertical) }
+    }
+    
+    public var horizontalHuggingPriorityRaw: Float {
+        get { return horizontalHuggingPriority.rawValue }
+        set { horizontalHuggingPriority = UILayoutPriority(newValue) }
+    }
+    
+    public var verticalHuggingPriorityRaw: Float {
+        get { return verticalHuggingPriority.rawValue }
+        set { verticalHuggingPriority = UILayoutPriority(newValue) }
+    }
+    
+}

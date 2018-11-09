@@ -17,6 +17,7 @@
 		EA2EE7DF2184E9BE00ED4BD0 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2EE7DE2184E9BE00ED4BD0 /* UIViewController+Extensions.swift */; };
 		EA2EE7E12184E9EF00ED4BD0 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2EE7E02184E9EF00ED4BD0 /* UIView+Extensions.swift */; };
 		EA2EE7E32184EAFC00ED4BD0 /* NSAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2EE7E22184EAFC00ED4BD0 /* NSAttributedString+Extensions.swift */; };
+		EAADAD1521951FA4007F1753 /* NSLayoutDimension+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAADAD1421951FA4007F1753 /* NSLayoutDimension+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EA2EE7DE2184E9BE00ED4BD0 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		EA2EE7E02184E9EF00ED4BD0 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		EA2EE7E22184EAFC00ED4BD0 /* NSAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extensions.swift"; sourceTree = "<group>"; };
+		EAADAD1421951FA4007F1753 /* NSLayoutDimension+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutDimension+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				EA2EE7DC2184E99F00ED4BD0 /* NSLayoutConstraint+Extensions.swift */,
 				EA2EE7DA2184E93700ED4BD0 /* NSLayoutAnchor+Extensions.swift */,
 				EA2EE7E22184EAFC00ED4BD0 /* NSAttributedString+Extensions.swift */,
+				EAADAD1421951FA4007F1753 /* NSLayoutDimension+Extensions.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				EA2EE7DD2184E99F00ED4BD0 /* NSLayoutConstraint+Extensions.swift in Sources */,
 				EA2EE7D02184E73900ED4BD0 /* UITextField+Extensions.swift in Sources */,
 				EA2EE7DF2184E9BE00ED4BD0 /* UIViewController+Extensions.swift in Sources */,
+				EAADAD1521951FA4007F1753 /* NSLayoutDimension+Extensions.swift in Sources */,
 				EA2EE7D82184E88F00ED4BD0 /* UIButton+Extensions.swift in Sources */,
 				EA2EE7D62184E82400ED4BD0 /* UIColor+Extensions.swift in Sources */,
 				EA2EE7E12184E9EF00ED4BD0 /* UIView+Extensions.swift in Sources */,
