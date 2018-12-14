@@ -10,16 +10,25 @@ import UIKit
 
 extension NSLayoutAnchor {
     
-    @objc public func equals(anchor: NSLayoutAnchor, constant: CGFloat = 0) {
-        constraint(equalTo: anchor, constant: constant).isActive = true
+    @objc @discardableResult
+    public func equals(anchor: NSLayoutAnchor, constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = self.constraint(equalTo: anchor, constant: constant)
+        constraint.isActive = true
+        return constraint
     }
     
-    @objc public func greaterOrEquals(anchor: NSLayoutAnchor, constant: CGFloat = 0) {
-        constraint(greaterThanOrEqualTo: anchor, constant: constant).isActive = true
+    @objc @discardableResult
+    public func greaterOrEquals(anchor: NSLayoutAnchor, constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = self.constraint(greaterThanOrEqualTo: anchor, constant: constant)
+        constraint.isActive = true
+        return constraint
     }
     
-    @objc public func lessOrEquals(anchor: NSLayoutAnchor, constant: CGFloat = 0) {
-        constraint(lessThanOrEqualTo: anchor, constant: constant).isActive = true
+    @objc @discardableResult
+    public func lessOrEquals(anchor: NSLayoutAnchor, constant: CGFloat = 0) -> NSLayoutConstraint {
+        let constraint = self.constraint(lessThanOrEqualTo: anchor, constant: constant)
+        constraint.isActive = true
+        return constraint
     }
     
 }
