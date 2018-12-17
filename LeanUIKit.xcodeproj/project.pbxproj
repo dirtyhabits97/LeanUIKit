@@ -84,8 +84,8 @@
 				EA2EE7DE2184E9BE00ED4BD0 /* UIViewController+Extensions.swift */,
 				EA2EE7DC2184E99F00ED4BD0 /* NSLayoutConstraint+Extensions.swift */,
 				EA2EE7DA2184E93700ED4BD0 /* NSLayoutAnchor+Extensions.swift */,
-				EA2EE7E22184EAFC00ED4BD0 /* NSAttributedString+Extensions.swift */,
 				EAADAD1421951FA4007F1753 /* NSLayoutDimension+Extensions.swift */,
+				EA2EE7E22184EAFC00ED4BD0 /* NSAttributedString+Extensions.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";

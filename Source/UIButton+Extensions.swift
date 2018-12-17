@@ -10,17 +10,17 @@ import UIKit
 
 extension UIButton {
     
-    public var titleForNormal: String? {
+    public var title: String? {
         get { return title(for: .normal) }
         set { setTitle(newValue, for: .normal) }
     }
     
-    public var attributedTitleForNormal: NSAttributedString? {
+    public var attributedTitle: NSAttributedString? {
         get { return attributedTitle(for: .normal) }
         set { setAttributedTitle(newValue, for: .normal) }
     }
     
-    public var titleColorForNormal: UIColor? {
+    public var titleColor: UIColor? {
         get { return titleColor(for: .normal) }
         set { setTitleColor(newValue, for: .normal) }
     }

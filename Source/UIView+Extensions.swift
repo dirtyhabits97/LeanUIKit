@@ -93,14 +93,14 @@ extension UIView {
         set { setContentHuggingPriority(newValue, for: .vertical) }
     }
     
-    public var horizontalHuggingPriorityRaw: Float {
-        get { return horizontalHuggingPriority.rawValue }
-        set { horizontalHuggingPriority = UILayoutPriority(newValue) }
+    public var horizontalCompressionPriority: UILayoutPriority {
+        get { return contentCompressionResistancePriority(for: .horizontal) }
+        set { setContentCompressionResistancePriority(newValue, for: .horizontal) }
     }
     
-    public var verticalHuggingPriorityRaw: Float {
-        get { return verticalHuggingPriority.rawValue }
-        set { verticalHuggingPriority = UILayoutPriority(newValue) }
+    public var verticalCompressionPriority: UILayoutPriority {
+        get { return contentCompressionResistancePriority(for: .vertical) }
+        set { setContentCompressionResistancePriority(newValue, for: .vertical) }
     }
     
 }
