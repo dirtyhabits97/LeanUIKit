@@ -29,13 +29,18 @@ extension UIView {
 
 extension UIView {
     
+    public func fillSuperView() {
+        guard let superview = self.superview else { return }
+        translatesAutoresizingMaskIntoConstraints = false
+        topAnchor.equals(anchor: superview.topAnchor)
+        bottomAnchor.equals(anchor: superview.bottomAnchor)
+        leadingAnchor.equals(anchor: superview.leadingAnchor)
+        trailingAnchor.equals(anchor: superview.trailingAnchor)
+    }
+    
     public func addAndFill(withSubView view: UIView) {
         addSubview(view)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.leadingAnchor.equals(anchor: leadingAnchor)
-        view.trailingAnchor.equals(anchor: trailingAnchor)
-        view.topAnchor.equals(anchor: topAnchor)
-        view.bottomAnchor.equals(anchor: bottomAnchor)
+        view.fillSuperView()
     }
     
     public func embedInVerticalScrollView(relativeTo parentView: UIView) -> UIScrollView {
