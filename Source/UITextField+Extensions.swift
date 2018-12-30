@@ -10,13 +10,8 @@ import UIKit
 
 extension UITextField {
     
-    public var isEmpty: Bool {
-        return text?.isEmpty ?? true
-    }
-    
-    public var isClean: Bool {
-        return cleanText != nil
-    }
+    public var isEmpty: Bool { return text?.isEmpty ?? true }
+    public var isClean: Bool { return cleanText != nil }
     
     public var cleanText: String? {
         guard let trimmed = text?.trimmingCharacters(in: .whitespaces) else { return nil }
@@ -24,9 +19,7 @@ extension UITextField {
     }
     
     public var paddingLeft: CGFloat {
-        get {
-            return leftView?.frame.width ?? 0
-        }
+        get { return leftView?.frame.width ?? 0 }
         set {
             leftView = UIView(frame: CGRect(x: 0, y: 0, width: newValue, height: 0))
             leftViewMode = .always
@@ -34,9 +27,7 @@ extension UITextField {
     }
     
     public var paddingRight: CGFloat {
-        get {
-            return rightView?.frame.width ?? 0
-        }
+        get { return rightView?.frame.width ?? 0 }
         set {
             rightView = UIView(frame: CGRect(x: 0, y: 0, width: newValue, height: 0))
             rightViewMode = .always
@@ -71,10 +62,6 @@ extension UITextField {
             keyboardType = .default
         }
     }
-    
-}
-
-extension UITextField {
     
     public convenience init(keyboardStyle: KeyboardStyle) {
         self.init(frame: .zero)

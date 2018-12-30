@@ -10,13 +10,8 @@ import UIKit
 
 extension UITextView {
     
-    public var isEmpty: Bool {
-        return text?.isEmpty ?? true
-    }
-    
-    public var isClean: Bool {
-        return cleanText != nil
-    }
+    public var isEmpty: Bool { return text?.isEmpty ?? true }
+    public var isClean: Bool { return cleanText != nil }
     
     public var cleanText: String? {
         guard let trimmed = text?.trimmingCharacters(in: .whitespaces) else { return nil }
