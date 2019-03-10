@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UIImageView {
+public extension UIImageView {
     
-    public func apply(alpha: CGFloat) {
+    func apply(alpha: CGFloat) {
         image = image?.applying(alpha: alpha)
     }
     

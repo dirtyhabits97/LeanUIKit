@@ -8,28 +8,28 @@
 
 import UIKit
 
-extension UIButton {
+public extension UIButton {
     
-    public var title: String? {
+    var title: String? {
         get { return title(for: .normal) }
         set { setTitle(newValue, for: .normal) }
     }
     
-    public var attributedTitle: NSAttributedString? {
+    var attributedTitle: NSAttributedString? {
         get { return attributedTitle(for: .normal) }
         set { setAttributedTitle(newValue, for: .normal) }
     }
     
-    public var titleColor: UIColor? {
+    var titleColor: UIColor? {
         get { return titleColor(for: .normal) }
         set { setTitleColor(newValue, for: .normal) }
     }
     
 }
 
-extension UIButton {
+public extension UIButton {
     
-    public static func roundedButton(cornerRadius: CGFloat) -> UIButton {
+    static func roundedButton(cornerRadius: CGFloat) -> UIButton {
         let button = UIButton()
         button.layer.cornerRadius = cornerRadius
         button.layer.masksToBounds = true

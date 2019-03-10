@@ -8,13 +8,13 @@
 
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     
-    public var isFirstInNavController: Bool {
+    var isFirstInNavController: Bool {
         return navigationController?.viewControllers.count == 1
     }
     
-    public func embedInNavController() -> UINavigationController {
+    func embedInNavController() -> UINavigationController {
         let navController = UINavigationController(rootViewController: self)
         navController.tabBarItem.title = self.tabBarItem.title ?? self.title
         navController.tabBarItem.image = self.tabBarItem.image

@@ -8,16 +8,16 @@
 
 import UIKit
 
-extension UIColor {
+public extension UIColor {
     
-    public convenience init(r: CGFloat, g: CGFloat, b: CGFloat) {
+    convenience init(r: CGFloat, g: CGFloat, b: CGFloat) {
         self.init(red: r/255, green: g/255, blue: b/255, alpha: 1)
     }
     
-    public func interpolate(with secondColor: UIColor, fraction: CGFloat) -> UIColor? {
+    func interpolate(with secondColor: UIColor, fraction: CGFloat) -> UIColor? {
         let f = min(max(0, fraction), 1)
         
-        guard let c1 = self.cgColor.components, let c2 = secondColor.cgColor.components else {
+        guard let c1 = cgColor.components, let c2 = secondColor.cgColor.components else {
             return nil
         }
         

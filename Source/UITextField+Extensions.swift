@@ -8,17 +8,17 @@
 
 import UIKit
 
-extension UITextField {
+public extension UITextField {
     
-    public var isEmpty: Bool { return text?.isEmpty ?? true }
-    public var isClean: Bool { return cleanText != nil }
+    var isEmpty: Bool { return text?.isEmpty ?? true }
+    var isClean: Bool { return cleanText != nil }
     
-    public var cleanText: String? {
+    var cleanText: String? {
         guard let trimmed = text?.trimmingCharacters(in: .whitespaces) else { return nil }
         return trimmed.isEmpty ? nil : trimmed
     }
     
-    public var paddingLeft: CGFloat {
+    var paddingLeft: CGFloat {
         get { return leftView?.frame.width ?? 0 }
         set {
             leftView = UIView(frame: CGRect(x: 0, y: 0, width: newValue, height: 0))
@@ -26,7 +26,7 @@ extension UITextField {
         }
     }
     
-    public var paddingRight: CGFloat {
+    var paddingRight: CGFloat {
         get { return rightView?.frame.width ?? 0 }
         set {
             rightView = UIView(frame: CGRect(x: 0, y: 0, width: newValue, height: 0))
@@ -36,18 +36,40 @@ extension UITextField {
     
 }
 
-extension UITextField {
+public extension UITextField {
     
-    public enum KeyboardStyle {
-        case email, password, numbers, phonenumber, normal
+    enum KeyboardStyle {
+        
+        case email
+        case password
+        case numbers
+        case phonenumber
+        case normal
+        
     }
     
-    public var keyboardStyle: KeyboardStyle {
+    var keyboardStyle: KeyboardStyle {
         get { return keyboardType.toKeyboardStyle(secureText: isSecureTextEntry) }
         set { setStyle(newValue) }
     }
     
-    private func setStyle(_ keyboardStyle: KeyboardStyle) {
+    convenience init(keyboardStyle: KeyboardStyle) {
+        self.init(frame: .zero)
+        layer.masksToBounds = true
+        autocapitalizationType = .none
+        autocorrectionType = .no
+        spellCheckingType = .no
+        keyboardAppearance = .default
+        clearButtonMode = .always
+        setStyle(keyboardStyle)
+        paddingLeft = 10
+    }
+    
+}
+
+private extension UITextField {
+    
+    func setStyle(_ keyboardStyle: KeyboardStyle) {
         switch keyboardStyle {
         case .email:
             keyboardType = .emailAddress
@@ -63,23 +85,11 @@ extension UITextField {
         }
     }
     
-    public convenience init(keyboardStyle: KeyboardStyle) {
-        self.init(frame: .zero)
-        layer.masksToBounds = true
-        autocapitalizationType = .none
-        autocorrectionType = .no
-        spellCheckingType = .no
-        keyboardAppearance = .default
-        clearButtonMode = .always
-        setStyle(keyboardStyle)
-        paddingLeft = 10
-    }
-    
 }
 
-extension UIKeyboardType {
+private extension UIKeyboardType {
     
-    fileprivate func toKeyboardStyle(secureText: Bool = false) -> UITextField.KeyboardStyle {
+    func toKeyboardStyle(secureText: Bool = false) -> UITextField.KeyboardStyle {
         switch self {
         case .emailAddress: return .email
         case .numbersAndPunctuation: return .numbers

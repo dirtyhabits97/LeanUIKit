@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension NSAttributedString {
+public extension NSAttributedString {
     
-    public convenience init(string: String, font: UIFont?, color: UIColor? = nil) {
+    convenience init(string: String, font: UIFont?, color: UIColor? = nil) {
         var attributes: [NSAttributedString.Key: Any] = [:]
         if let font = font {
             attributes[.font] = font
@@ -23,9 +23,9 @@ extension NSAttributedString {
     
 }
 
-extension NSMutableAttributedString {
+public extension NSMutableAttributedString {
     
-    public func append(string: String, font: UIFont?, color: UIColor? = nil) {
+    func append(string: String, font: UIFont?, color: UIColor? = nil) {
         append(NSAttributedString(string: string, font: font, color: color))
     }
     
