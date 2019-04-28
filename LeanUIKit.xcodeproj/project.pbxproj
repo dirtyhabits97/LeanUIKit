@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D617684F2274AFDE0018D38E /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617684E2274AFDE0018D38E /* UINavigationController+Extensions.swift */; };
+		D617686822754C640018D38E /* UITabBarController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617686722754C640018D38E /* UITabBarController+Extensions.swift */; };
 		EA2EE7C82184E4F000ED4BD0 /* LeanUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2EE7C62184E4F000ED4BD0 /* LeanUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA2EE7D02184E73900ED4BD0 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2EE7CF2184E73900ED4BD0 /* UITextField+Extensions.swift */; };
 		EA2EE7D22184E7B800ED4BD0 /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2EE7D12184E7B800ED4BD0 /* UITextView+Extensions.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D617684E2274AFDE0018D38E /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
+		D617686722754C640018D38E /* UITabBarController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extensions.swift"; sourceTree = "<group>"; };
 		EA2EE7C32184E4F000ED4BD0 /* LeanUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2EE7C62184E4F000ED4BD0 /* LeanUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeanUIKit.h; sourceTree = "<group>"; };
 		EA2EE7C72184E4F000ED4BD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 				EA6CB4EA21D1B92D00B013F5 /* UIImage+Extensions.swift */,
 				EA6CB4EC21D1BB0F00B013F5 /* UIImageView+Extensions.swift */,
 				EA2EE7DE2184E9BE00ED4BD0 /* UIViewController+Extensions.swift */,
+				D617684E2274AFDE0018D38E /* UINavigationController+Extensions.swift */,
+				D617686722754C640018D38E /* UITabBarController+Extensions.swift */,
 				EA2EE7E22184EAFC00ED4BD0 /* NSAttributedString+Extensions.swift */,
 			);
 			path = Source;
@@ -166,10 +172,12 @@
 				EA2EE7E32184EAFC00ED4BD0 /* NSAttributedString+Extensions.swift in Sources */,
 				EA2EE7D02184E73900ED4BD0 /* UITextField+Extensions.swift in Sources */,
 				EA6CB4EB21D1B92D00B013F5 /* UIImage+Extensions.swift in Sources */,
+				D617686822754C640018D38E /* UITabBarController+Extensions.swift in Sources */,
 				EA2EE7DF2184E9BE00ED4BD0 /* UIViewController+Extensions.swift in Sources */,
 				EA6CB4ED21D1BB0F00B013F5 /* UIImageView+Extensions.swift in Sources */,
 				EA2EE7D82184E88F00ED4BD0 /* UIButton+Extensions.swift in Sources */,
 				EA2EE7D62184E82400ED4BD0 /* UIColor+Extensions.swift in Sources */,
+				D617684F2274AFDE0018D38E /* UINavigationController+Extensions.swift in Sources */,
 				EA2EE7D22184E7B800ED4BD0 /* UITextView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

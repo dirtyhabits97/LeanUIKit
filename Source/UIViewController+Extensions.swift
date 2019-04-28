@@ -10,14 +10,38 @@ import UIKit
 
 public extension UIViewController {
     
-    var isFirstInNavController: Bool {
-        return navigationController?.viewControllers.count == 1
+    var lastPresentedViewController: UIViewController {
+        var current = self
+        while current.presentedViewController != nil {
+            current = current.presentedViewController!
+        }
+        return current
     }
+    
+    var lastVisibleViewController: UIViewController {
+        var current: UIViewController = lastPresentedViewController
+        var next: UIViewController? = current
+        while next != nil {
+            current = next!
+            if let navigationController = next as? UINavigationController {
+                next = navigationController.visibleViewController
+            } else if let tabBarController = next as? UITabBarController {
+                next = tabBarController.selectedViewController
+            } else {
+                next = next?.presentedViewController
+            }
+        }
+        return current
+    }
+    
+}
+
+public extension UIViewController {
     
     func embedInNavController() -> UINavigationController {
         let navController = UINavigationController(rootViewController: self)
-        navController.tabBarItem.title = self.tabBarItem.title ?? self.title
-        navController.tabBarItem.image = self.tabBarItem.image
+        navController.tabBarItem.title = tabBarItem.title ?? title
+        navController.tabBarItem.image = tabBarItem.image
         return navController
     }
     
