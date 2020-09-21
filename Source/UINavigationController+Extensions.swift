@@ -10,6 +10,8 @@ import UIKit
 
 public extension UINavigationController {
     
+    /// Proxy property for the first `UIViewController`
+    /// in the `UINavigationController.viewControllers` stack.
     var rootViewController: UIViewController? {
         get { return viewControllers.first }
         set {
@@ -21,7 +23,8 @@ public extension UINavigationController {
             }
         }
     }
-    
+    /// Proxy property for the last `UIViewController`
+    /// in the `UINavigationController.viewControllers` stack.
     var tailViewController: UIViewController? {
         get { return viewControllers.last }
         set {
@@ -34,6 +37,10 @@ public extension UINavigationController {
         }
     }
     
+    /**
+     Inserts a new head / root `UIViewController` in the
+     `UINavigationController.viewControllers` stack.
+     */
     func insert(newRootViewController: UIViewController, animated: Bool = false) {
         setViewControllers(
             [newRootViewController] + viewControllers,
