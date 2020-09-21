@@ -10,18 +10,18 @@ import XCTest
 @testable import LeanUIKit
 
 class LayoutBuilderTestCase: XCTestCase {
-    
+
     let bundle = Bundle(for: LayoutBuilderTestCase.self)
     var builder: LayoutBuilder!
-    
+
     override class func setUp() {
         LayoutBuilder.showLogs = false
     }
-    
+
     override func tearDown() {
         builder = nil
     }
-    
+
     func testHorizontalConstraints() {
         let view = UIView()
         let label = UILabel()
@@ -38,7 +38,7 @@ class LayoutBuilderTestCase: XCTestCase {
                 "l2": label2,
                 "l3": label3,
                 "l4": label4,
-                "l5": label5,
+                "l5": label5
             ]
         )
         builder.build { }
@@ -62,7 +62,7 @@ class LayoutBuilderTestCase: XCTestCase {
             )
         }
     }
-    
+
     func testVerticalConstraints() {
         let view = UIView()
         let label = UILabel()
@@ -86,7 +86,7 @@ class LayoutBuilderTestCase: XCTestCase {
             label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16),
             label2.topAnchor.constraint(greaterThanOrEqualTo: view.topAnchor, constant: 16),
             label2.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: -16),
-            label3.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            label3.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ]
         for (lhs, rhs) in zip(builder.constraints, constraints) {
             XCTAssertTrue(
@@ -95,7 +95,7 @@ class LayoutBuilderTestCase: XCTestCase {
             )
         }
     }
-    
+
     func testDimensionConstraints() {
         let view = UIView()
         let label = UILabel()
@@ -120,7 +120,7 @@ class LayoutBuilderTestCase: XCTestCase {
             label3.widthAnchor.constraint(equalTo: label.widthAnchor, multiplier: 0.5),
             label.heightAnchor.constraint(equalTo: label.widthAnchor),
             label2.heightAnchor.constraint(equalToConstant: 44),
-            label3.heightAnchor.constraint(equalTo: label.heightAnchor, multiplier: 0.5),
+            label3.heightAnchor.constraint(equalTo: label.heightAnchor, multiplier: 0.5)
         ]
         for (lhs, rhs) in zip(builder.constraints, constraints) {
             XCTAssertTrue(
@@ -129,7 +129,7 @@ class LayoutBuilderTestCase: XCTestCase {
             )
         }
     }
-    
+
     func testConstraintErrors() {
         LayoutBuilder.showLogs = true
         let view = UIView()
@@ -154,14 +154,14 @@ class LayoutBuilderTestCase: XCTestCase {
 }
 
 private extension UIView {
-    
+
     func addSuviews(_ views: [UIView]) {
         for view in views {
             view.translatesAutoresizingMaskIntoConstraints = false
             addSubview(view)
         }
     }
-    
+
 }
 
 private func compare(

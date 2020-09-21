@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UITextView {
-    
+
     /// A Boolean value indicating whether `UITextView.text` has no characters.
     var isEmpty: Bool { return text?.isEmpty ?? true }
     /// A Boolean value indicating whether `UITextView.cleanText` has content.
@@ -19,5 +19,5 @@ public extension UITextView {
         guard let trimmed = text?.trimmingCharacters(in: .whitespaces) else { return nil }
         return trimmed.isEmpty ? nil : trimmed
     }
-    
+
 }

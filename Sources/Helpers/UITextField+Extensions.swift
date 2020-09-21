@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UITextField {
-    
+
     /// A Boolean value indicating whether `UITextField.text` has no characters.
     var isEmpty: Bool { return text?.isEmpty ?? true }
     /// A Boolean value indicating whether `UITextField.cleanText` has content.
@@ -35,28 +35,28 @@ public extension UITextField {
             rightViewMode = .always
         }
     }
-    
+
 }
 
 public extension UITextField {
-    
+
     /// The strongly typed keyboard style
     enum KeyboardStyle {
-        
+
         case email
         case password
         case numbers
         case phonenumber
         case normal
-        
+
     }
-    
+
     /// The style of the keyboard for this `UITextField`.
     var keyboardStyle: KeyboardStyle {
         get { return keyboardType.toKeyboardStyle(secureText: isSecureTextEntry) }
         set { setStyle(newValue) }
     }
-    
+
     /**
      - Parameters:
         - keyboardStyle: the keyboard style to use for this `UITextField`.
@@ -72,11 +72,11 @@ public extension UITextField {
         setStyle(keyboardStyle)
         paddingLeft = 10
     }
-    
+
 }
 
 private extension UITextField {
-    
+
     /**
      Configures the `UITextField` by the given `KeyboardStyle`.
      
@@ -98,11 +98,11 @@ private extension UITextField {
             keyboardType = .default
         }
     }
-    
+
 }
 
 private extension UIKeyboardType {
-    
+
     /**
      Maps `UIKeyboardType` to `UITextField.KeyboardStyle`
      
@@ -117,5 +117,5 @@ private extension UIKeyboardType {
         default: return secureText ? .password : .normal
         }
     }
-    
+
 }

@@ -10,18 +10,18 @@ import Foundation
 
 /// The entity that constantly observes a file.
 class FileObserver {
-    
+
     // MARK: - Properties
-    
+
     /// The dispatch source that observes file changes.
     private var observer: DispatchSourceFileSystemObject?
     /// The closure that gets called when the observed file is modified.
     var onChange: (() -> Void)?
     /// The path to the file to observe.
     let path: String
-    
+
     // MARK: - Lifecycle
-    
+
     /**
      - Parameters:
         - fileToObserve: the path to the file to observe.
@@ -29,7 +29,7 @@ class FileObserver {
     init(fileToObserve: String) {
         path = fileToObserve
     }
-    
+
     /**
      Starts observing the file.
      */
@@ -53,5 +53,5 @@ class FileObserver {
         // start observing
         observer?.resume()
     }
-    
+
 }

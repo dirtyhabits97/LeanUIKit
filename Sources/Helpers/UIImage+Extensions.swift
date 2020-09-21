@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIImage {
-    
+
     /**
      Returns an `UIImage` with the given `alpha`.
      
@@ -24,5 +24,5 @@ public extension UIImage {
         UIGraphicsEndImageContext()
         return image
     }
-    
+
 }

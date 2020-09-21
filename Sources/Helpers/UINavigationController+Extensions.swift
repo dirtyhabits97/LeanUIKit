@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UINavigationController {
-    
+
     /// Proxy property for the first `UIViewController`
     /// in the `UINavigationController.viewControllers` stack.
     var rootViewController: UIViewController? {
@@ -36,7 +36,7 @@ public extension UINavigationController {
             }
         }
     }
-    
+
     /**
      Inserts a new head / root `UIViewController` in the
      `UINavigationController.viewControllers` stack.
@@ -47,5 +47,5 @@ public extension UINavigationController {
             animated: animated
         )
     }
-    
+
 }

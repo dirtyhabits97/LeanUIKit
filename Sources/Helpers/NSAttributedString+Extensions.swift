@@ -9,7 +9,7 @@
 import UIKit
 
 public extension NSAttributedString {
-    
+
     /**
      - Parameters:
         - string: the string to use.
@@ -30,11 +30,11 @@ public extension NSAttributedString {
         }
         self.init(string: string, attributes: attributes)
     }
-    
+
 }
 
 public extension NSMutableAttributedString {
-    
+
     /**
      Appends an `NSAttributedString` built from the passed params.
      
@@ -50,5 +50,5 @@ public extension NSMutableAttributedString {
     ) {
         append(NSAttributedString(string: string, font: font, color: color))
     }
-    
+
 }

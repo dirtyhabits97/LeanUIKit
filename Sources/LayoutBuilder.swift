@@ -5,6 +5,7 @@
 //  Created by Gonzalo Reyes Huertas on 9/21/20.
 //  Copyright © 2020 Gonzalo Reyes Huertas. All rights reserved.
 //
+// swiftlint:disable identifier_name
 
 import UIKit
 
@@ -12,9 +13,9 @@ import UIKit
  Builds the layout for views based on a contraints file.
  */
 public final class LayoutBuilder {
-    
+
     // MARK: - Properties
-    
+
     /// A flag that indicates if the LayoutBuilder should show the
     /// activated constraints.
     public static var showLogs: Bool = true
@@ -26,9 +27,9 @@ public final class LayoutBuilder {
     private(set) var constraints: [NSLayoutConstraint] = []
     /// Observes changes in the constraint file.
     private var observer: FileObserver?
-    
+
     // MARK: - Lifecycle
-    
+
     /**
      - Parameters:
         - url: the URL where the contraint file is located.
@@ -40,9 +41,9 @@ public final class LayoutBuilder {
         self.observer = FileObserver(fileToObserve: url.path)
         self.constraintBuilder = ConstraintBuilder(views: views)
     }
-    
+
     // MARK: - Methods
-    
+
     /**
      Builds the layout from the constraint file. Rebuilds the layout
      when the file is modified.
@@ -69,7 +70,7 @@ public final class LayoutBuilder {
         // build the layout
         self._build()
     }
-    
+
     /**
      Builds the layout from the constraint file.
      */
@@ -114,14 +115,12 @@ public final class LayoutBuilder {
         print()
         print("*******************************************************************************")
     }
-    
-    
+
 }
 
-// TODO: improve by supporting both multiplier and constant
 /// The raw constraint components from the constraint file.
 private struct ConstraintComponents {
-    
+
     var leftView: String = ""
     var leftAttribute: Attribute?
     var relation: Relation?
@@ -129,7 +128,7 @@ private struct ConstraintComponents {
     var rightAttribute: Attribute?
     var op: Operator?
     var constant: CGFloat?
-    
+
 }
 
 /**
@@ -143,18 +142,18 @@ private struct ConstraintComponents {
  ```
  */
 private class ConstraintBuilder {
-    
+
     // MARK: - Properties
-    
+
     /// The raw representation of the constraint
     private var components = ConstraintComponents()
     /// The views that will be used to build the contraint
     private var views: [String: UIView]
     /// The entity that reads the string
     private let reader: ConstraintReader
-    
+
     // MARK: - Lifecycle
-    
+
     /**
      - Parameters:
         - views: the map of key: identifier and value: view. All the views in
@@ -164,14 +163,14 @@ private class ConstraintBuilder {
         self.views = views
         self.reader = ConstraintReader(views: Set(views.keys))
     }
-    
+
     /// Resets the components property.
     func reset() {
         components = ConstraintComponents()
     }
-    
+
     // MARK: - Methods
-    
+
     /**
      Builds the constraint from a string.
      
@@ -182,9 +181,9 @@ private class ConstraintBuilder {
         try reader.readLine(str, writeInto: &components)
         return try _build()
     }
-    
+
     /// Builds the constraint from the `components` property.
-    private func _build() throws -> NSLayoutConstraint  {
+    private func _build() throws -> NSLayoutConstraint {
         // get the left view
         guard let lhs = views[components.leftView] else {
             throw ReadLineError.invalidView(components.leftView)
@@ -202,7 +201,7 @@ private class ConstraintBuilder {
         let lhsAttribute = try getAttribute(from: leftAttribute)
         let rhsAttribute = try getAttribute(from: components.rightAttribute ?? leftAttribute)
         let relation = try getRelation(from: rawRelation)
-        
+
         // Edge case #1: nil second item with location for the first attribute
         // Example: view.top = 44
         if rhs == nil && ![.height, .width].contains(lhsAttribute) {
@@ -216,7 +215,7 @@ private class ConstraintBuilder {
         else {
             throw ReadLineError.invalidConstraint
         }
-        
+
         let multiplier: CGFloat
         let constant: CGFloat
         switch components.op {
@@ -230,7 +229,7 @@ private class ConstraintBuilder {
             multiplier = 1
             constant = components.constant ?? 0
         }
-        
+
         return NSLayoutConstraint(
             item: lhs,
             attribute: lhsAttribute,
@@ -241,9 +240,9 @@ private class ConstraintBuilder {
             constant: constant
         )
     }
-    
+
     // MARK: - Helper methods
-    
+
     private func getAttribute(from attribute: Attribute) throws -> NSLayoutConstraint.Attribute {
         switch attribute {
         case .left:
@@ -268,7 +267,7 @@ private class ConstraintBuilder {
             return .centerY
         }
     }
-    
+
     private func getRelation(from relation: Relation) throws -> NSLayoutConstraint.Relation {
         switch relation {
         case .equal:
@@ -279,20 +278,20 @@ private class ConstraintBuilder {
             return .greaterThanOrEqual
         }
     }
-    
+
 }
 
 /**
  Reads a string and extracts the `ContraintComponents`.
  */
 private struct ConstraintReader {
-    
+
     let views: Set<String>
-    
+
     init(views: Set<String>) {
         self.views = views
     }
-    
+
     /**
      Reads the string, and writes the raw components into the passed `ConstraintComponents`.
      
@@ -311,7 +310,7 @@ private struct ConstraintReader {
         // or
         // validate it is complete (length = 5)
         // C. leftView.anchor  comparator  rightView(.anchor)?  operator  constant
-        guard [3,5].contains(splits.count) else {
+        guard [3, 5].contains(splits.count) else {
             throw ReadLineError.invalidFormat(str)
         }
         // 1. get the left view and anchor
@@ -366,18 +365,18 @@ private struct ConstraintReader {
         }
         components.constant = constant
     }
-    
+
     private func splitViewAndAttribute<S: StringProtocol>(_ str: S) -> (String, String?) {
         guard let splitIdx = str.firstIndex(of: ".") else {
             return (String(str), nil)
         }
         return (String(str[..<splitIdx]), String(str[str.index(after: splitIdx)...]))
     }
-    
+
 }
 
 extension CGFloat {
-    
+
     init?<S: StringProtocol>(_ str: S) {
         if let value = Int(str) {
             self = CGFloat(value)
@@ -387,11 +386,11 @@ extension CGFloat {
             return nil
         }
     }
-    
+
 }
 
 private enum ReadLineError: LocalizedError, Equatable {
-        
+
     /// Not really an error, used to skip the current line.
     case skip
     /// The passed constraint is logically invalid.
@@ -408,7 +407,7 @@ private enum ReadLineError: LocalizedError, Equatable {
     case invalidOperator(String)
     /// A constant or multiplier was expected, but the string ended.
     case expectedOffset(String)
-    
+
     var localizedDescription: String {
         switch self {
         case .skip:
@@ -429,51 +428,50 @@ private enum ReadLineError: LocalizedError, Equatable {
             return "Expected an offset, but got \"\(o)\" instead."
         }
     }
-        
+
 }
 
 private enum Relation: Character {
-    
+
     case equal = "="
     case less = "<"
     case greater = ">"
-    
+
 }
 
 private enum Operator: Character {
-    
+
     case sum = "+"
     case substract = "-"
     case multiply = "*"
-    
+
 }
 
 private enum Attribute: String {
-    
+
     // MARK: - Cases
-    
+
     case top = "top"
     case bottom = "bottom"
     case left = "left"
     case right = "right"
     case leading = "lead"
     case trailing = "trail"
-    
+
     case width = "width"
     case height = "height"
-    
+
     case centerX = "centerX"
     case centerY = "centerY"
-    
+
     // MARK: - Properties
-    
+
     static let horizontal: Set<NSLayoutConstraint.Attribute> = [
         .left, .right, .leading, .trailing, .centerX
     ]
-    
+
     static let vertical: Set<NSLayoutConstraint.Attribute> = [
         .top, .bottom, .centerY
     ]
-    
-}
 
+}

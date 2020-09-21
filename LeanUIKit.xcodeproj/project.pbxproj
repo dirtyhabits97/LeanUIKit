@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		840F57CC251966D0002766DF /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 840F57CD251966D0002766DF /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+				840F57D6251966DD002766DF /* SwiftLint */,
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+			productName = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		840F5782251960F2002766DF /* FileObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F5781251960F2002766DF /* FileObserver.swift */; };
 		840F578525196125002766DF /* LayoutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F578425196125002766DF /* LayoutBuilder.swift */; };
@@ -15,6 +29,7 @@
 		840F57BD251962BB002766DF /* error_constraints in Resources */ = {isa = PBXBuildFile; fileRef = 840F57B82519626E002766DF /* error_constraints */; };
 		840F57BE251962BB002766DF /* horizontal_constraints in Resources */ = {isa = PBXBuildFile; fileRef = 840F57AC25196242002766DF /* horizontal_constraints */; };
 		840F57BF251962BB002766DF /* dimension_constraints in Resources */ = {isa = PBXBuildFile; fileRef = 840F57B425196261002766DF /* dimension_constraints */; };
+		840F57D925196756002766DF /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 840F57D825196756002766DF /* .swiftlint.yml */; };
 		D617684F2274AFDE0018D38E /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617684E2274AFDE0018D38E /* UINavigationController+Extensions.swift */; };
 		D617686822754C640018D38E /* UITabBarController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617686722754C640018D38E /* UITabBarController+Extensions.swift */; };
 		EA2EE7C82184E4F000ED4BD0 /* LeanUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2EE7C62184E4F000ED4BD0 /* LeanUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -48,6 +63,7 @@
 		840F57B025196250002766DF /* vertical_constraints */ = {isa = PBXFileReference; lastKnownFileType = text; path = vertical_constraints; sourceTree = "<group>"; };
 		840F57B425196261002766DF /* dimension_constraints */ = {isa = PBXFileReference; lastKnownFileType = text; path = dimension_constraints; sourceTree = "<group>"; };
 		840F57B82519626E002766DF /* error_constraints */ = {isa = PBXFileReference; lastKnownFileType = text; path = error_constraints; sourceTree = "<group>"; };
+		840F57D825196756002766DF /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D617684E2274AFDE0018D38E /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		D617686722754C640018D38E /* UITabBarController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extensions.swift"; sourceTree = "<group>"; };
 		EA2EE7C32184E4F000ED4BD0 /* LeanUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +156,7 @@
 		EA2EE7B92184E4F000ED4BD0 = {
 			isa = PBXGroup;
 			children = (
+				840F57D825196756002766DF /* .swiftlint.yml */,
 				EA2EE7CE2184E5B700ED4BD0 /* Sources */,
 				840F578C25196185002766DF /* Tests */,
 				EA2EE7C42184E4F000ED4BD0 /* Products */,
@@ -229,6 +246,9 @@
 					840F578A25196185002766DF = {
 						CreatedOnToolsVersion = 12.0;
 					};
+					840F57CC251966D0002766DF = {
+						CreatedOnToolsVersion = 12.0;
+					};
 					EA2EE7C22184E4F000ED4BD0 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1200;
@@ -250,6 +270,7 @@
 			targets = (
 				EA2EE7C22184E4F000ED4BD0 /* LeanUIKit */,
 				840F578A25196185002766DF /* LeanUIKitTests */,
+				840F57CC251966D0002766DF /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
@@ -270,10 +291,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840F57D925196756002766DF /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		840F57D6251966DD002766DF /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		840F578725196185002766DF /* Sources */ = {
@@ -351,6 +394,24 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		840F57CE251966D0002766DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4D3BQQ6A8Z;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		840F57CF251966D0002766DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4D3BQQ6A8Z;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -541,6 +602,15 @@
 			buildConfigurations = (
 				840F579425196185002766DF /* Debug */,
 				840F579525196185002766DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		840F57CD251966D0002766DF /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				840F57CE251966D0002766DF /* Debug */,
+				840F57CF251966D0002766DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

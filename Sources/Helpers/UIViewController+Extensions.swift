@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIViewController {
-    
+
     /// Returns the last presented `UIViewController`
     var lastPresentedViewController: UIViewController {
         var current = self
@@ -18,7 +18,7 @@ public extension UIViewController {
         }
         return current
     }
-    
+
     /// Returns the last visible `UIViewController`
     /// from the hierarchy.
     var lastVisibleViewController: UIViewController {
@@ -36,11 +36,11 @@ public extension UIViewController {
         }
         return current
     }
-    
+
 }
 
 public extension UIViewController {
-    
+
     /**
      Embeds the current `UIViewController` in a `UINavigationController`.
      */
@@ -50,5 +50,5 @@ public extension UIViewController {
         navController.tabBarItem.image = tabBarItem.image
         return navController
     }
-    
+
 }

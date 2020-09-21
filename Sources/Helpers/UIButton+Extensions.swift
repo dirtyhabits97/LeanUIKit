@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIButton {
-    
+
     /// Proxy property for the button's title.
     var title: String? {
         get { return title(for: .normal) }
@@ -25,11 +25,11 @@ public extension UIButton {
         get { return titleColor(for: .normal) }
         set { setTitleColor(newValue, for: .normal) }
     }
-    
+
 }
 
 public extension UIButton {
-    
+
     /**
      Creates a `UIButton` with rounded corners.
      
@@ -42,5 +42,5 @@ public extension UIButton {
         button.layer.masksToBounds = true
         return button
     }
-    
+
 }

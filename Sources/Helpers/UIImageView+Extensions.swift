@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIImageView {
-    
+
     /**
      Applies `alpha` to `UIImageView.image`
      
@@ -19,5 +19,5 @@ public extension UIImageView {
     func apply(alpha: CGFloat) {
         image = image?.applying(alpha: alpha)
     }
-    
+
 }
