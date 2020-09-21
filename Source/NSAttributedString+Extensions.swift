@@ -10,7 +10,17 @@ import UIKit
 
 public extension NSAttributedString {
     
-    convenience init(string: String, font: UIFont?, color: UIColor? = nil) {
+    /**
+     - Parameters:
+        - string: the string to use.
+        - font: the `NSAttributedString.Key.font` to use.
+        - color: the `NSAttributedString.Key.foregroundColor` to use.
+     */
+    convenience init(
+        string: String,
+        font: UIFont?,
+        color: UIColor? = nil
+    ) {
         var attributes: [NSAttributedString.Key: Any] = [:]
         if let font = font {
             attributes[.font] = font
@@ -25,7 +35,19 @@ public extension NSAttributedString {
 
 public extension NSMutableAttributedString {
     
-    func append(string: String, font: UIFont?, color: UIColor? = nil) {
+    /**
+     Appends an `NSAttributedString` built from the passed params.
+     
+     - Parameters:
+        - string: the string to use.
+        - font: the `NSAttributedString.Key.font` to use.
+        - color: the `NSAttributedString.Key.foregroundColor` to use.
+     */
+    func append(
+        string: String,
+        font: UIFont?,
+        color: UIColor? = nil
+    ) {
         append(NSAttributedString(string: string, font: font, color: color))
     }
     
