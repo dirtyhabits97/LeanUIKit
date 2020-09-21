@@ -10,11 +10,27 @@ import UIKit
 
 public extension UIColor {
     
+    /**
+     - Parameters:
+        - r: red composition of the color.
+        - g: green composition of the color.
+        - b: blue composition of the color.
+     */
     convenience init(r: CGFloat, g: CGFloat, b: CGFloat) {
         self.init(red: r/255, green: g/255, blue: b/255, alpha: 1)
     }
     
-    func interpolate(with secondColor: UIColor, fraction: CGFloat) -> UIColor? {
+    /**
+     Interpolates `UIColor` with the given second color.
+     
+     - Parameters:
+        - secondColor: the `UIColor` to interpolate the current color with.
+        - fraction: the % of dominance of the `secondColor`.
+     */
+    func interpolate(
+        with secondColor: UIColor,
+        fraction: CGFloat
+    ) -> UIColor? {
         let f = min(max(0, fraction), 1)
         
         guard let c1 = cgColor.components, let c2 = secondColor.cgColor.components else {
