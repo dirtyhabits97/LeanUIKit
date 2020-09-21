@@ -41,4 +41,4 @@ Whenever you save your file, the constraints will be updated.
 
 ## Author
 
-* Gonzalo Reyes Huertas
+* (Gonzalo Reyes Huertas)[https://github.com/dirtyhabits97]
