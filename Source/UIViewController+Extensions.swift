@@ -10,6 +10,7 @@ import UIKit
 
 public extension UIViewController {
     
+    /// Returns the last presented `UIViewController`
     var lastPresentedViewController: UIViewController {
         var current = self
         while current.presentedViewController != nil {
@@ -18,6 +19,8 @@ public extension UIViewController {
         return current
     }
     
+    /// Returns the last visible `UIViewController`
+    /// from the hierarchy.
     var lastVisibleViewController: UIViewController {
         var current: UIViewController = lastPresentedViewController
         var next: UIViewController? = current
@@ -38,6 +41,9 @@ public extension UIViewController {
 
 public extension UIViewController {
     
+    /**
+     Embeds the current `UIViewController` in a `UINavigationController`.
+     */
     func embedInNavController() -> UINavigationController {
         let navController = UINavigationController(rootViewController: self)
         navController.tabBarItem.title = tabBarItem.title ?? title
