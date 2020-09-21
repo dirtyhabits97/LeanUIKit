@@ -1,0 +1,13 @@
+l.lead = s + 16
+l.trail = s - 16
+
+l2.lead > s + 16
+l2.trail < s - 16
+
+l3.left = s + 16
+l3.right = s - 16
+
+l4.left > s + 16
+l4.right < s - 16
+
+l5.centerX = s

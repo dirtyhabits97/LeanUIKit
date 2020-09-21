@@ -1,0 +1,7 @@
+l.top = s.top + 16
+l.bottom = s.bottom - 16
+
+l2.top > s + 16
+l2.bottom < s - 16
+
+l3.centerY = s

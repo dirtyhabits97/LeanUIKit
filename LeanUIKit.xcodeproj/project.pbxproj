@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		840F5782251960F2002766DF /* FileObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F5781251960F2002766DF /* FileObserver.swift */; };
 		840F578525196125002766DF /* LayoutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F578425196125002766DF /* LayoutBuilder.swift */; };
+		840F579025196185002766DF /* LeanUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2EE7C32184E4F000ED4BD0 /* LeanUIKit.framework */; };
+		840F57A525196211002766DF /* LayoutBuilderTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840F579D251961EC002766DF /* LayoutBuilderTestCase.swift */; };
+		840F57BC251962BB002766DF /* vertical_constraints in Resources */ = {isa = PBXBuildFile; fileRef = 840F57B025196250002766DF /* vertical_constraints */; };
+		840F57BD251962BB002766DF /* error_constraints in Resources */ = {isa = PBXBuildFile; fileRef = 840F57B82519626E002766DF /* error_constraints */; };
+		840F57BE251962BB002766DF /* horizontal_constraints in Resources */ = {isa = PBXBuildFile; fileRef = 840F57AC25196242002766DF /* horizontal_constraints */; };
+		840F57BF251962BB002766DF /* dimension_constraints in Resources */ = {isa = PBXBuildFile; fileRef = 840F57B425196261002766DF /* dimension_constraints */; };
 		D617684F2274AFDE0018D38E /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617684E2274AFDE0018D38E /* UINavigationController+Extensions.swift */; };
 		D617686822754C640018D38E /* UITabBarController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D617686722754C640018D38E /* UITabBarController+Extensions.swift */; };
 		EA2EE7C82184E4F000ED4BD0 /* LeanUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2EE7C62184E4F000ED4BD0 /* LeanUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -22,9 +28,26 @@
 		EA6CB4ED21D1BB0F00B013F5 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6CB4EC21D1BB0F00B013F5 /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		840F579125196185002766DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA2EE7BA2184E4F000ED4BD0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA2EE7C22184E4F000ED4BD0;
+			remoteInfo = LeanUIKit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		840F5781251960F2002766DF /* FileObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileObserver.swift; sourceTree = "<group>"; };
 		840F578425196125002766DF /* LayoutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutBuilder.swift; sourceTree = "<group>"; };
+		840F578B25196185002766DF /* LeanUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeanUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		840F578F25196185002766DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		840F579D251961EC002766DF /* LayoutBuilderTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutBuilderTestCase.swift; sourceTree = "<group>"; };
+		840F57AC25196242002766DF /* horizontal_constraints */ = {isa = PBXFileReference; lastKnownFileType = text; path = horizontal_constraints; sourceTree = "<group>"; };
+		840F57B025196250002766DF /* vertical_constraints */ = {isa = PBXFileReference; lastKnownFileType = text; path = vertical_constraints; sourceTree = "<group>"; };
+		840F57B425196261002766DF /* dimension_constraints */ = {isa = PBXFileReference; lastKnownFileType = text; path = dimension_constraints; sourceTree = "<group>"; };
+		840F57B82519626E002766DF /* error_constraints */ = {isa = PBXFileReference; lastKnownFileType = text; path = error_constraints; sourceTree = "<group>"; };
 		D617684E2274AFDE0018D38E /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
 		D617686722754C640018D38E /* UITabBarController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extensions.swift"; sourceTree = "<group>"; };
 		EA2EE7C32184E4F000ED4BD0 /* LeanUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LeanUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +64,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		840F578825196185002766DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840F579025196185002766DF /* LeanUIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA2EE7C02184E4F000ED4BD0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,6 +89,35 @@
 				EA2EE7C72184E4F000ED4BD0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		840F578C25196185002766DF /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				840F579C251961AA002766DF /* Supporting Files */,
+				840F57AB2519622A002766DF /* Layout */,
+				840F579D251961EC002766DF /* LayoutBuilderTestCase.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		840F579C251961AA002766DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				840F578F25196185002766DF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		840F57AB2519622A002766DF /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				840F57AC25196242002766DF /* horizontal_constraints */,
+				840F57B025196250002766DF /* vertical_constraints */,
+				840F57B425196261002766DF /* dimension_constraints */,
+				840F57B82519626E002766DF /* error_constraints */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		844C9D2F2519601F000D49DD /* Helpers */ = {
@@ -81,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				EA2EE7CE2184E5B700ED4BD0 /* Sources */,
+				840F578C25196185002766DF /* Tests */,
 				EA2EE7C42184E4F000ED4BD0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				EA2EE7C32184E4F000ED4BD0 /* LeanUIKit.framework */,
+				840F578B25196185002766DF /* LeanUIKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +180,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		840F578A25196185002766DF /* LeanUIKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 840F579325196185002766DF /* Build configuration list for PBXNativeTarget "LeanUIKitTests" */;
+			buildPhases = (
+				840F578725196185002766DF /* Sources */,
+				840F578825196185002766DF /* Frameworks */,
+				840F578925196185002766DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				840F579225196185002766DF /* PBXTargetDependency */,
+			);
+			name = LeanUIKitTests;
+			productName = LeanUIKitTests;
+			productReference = 840F578B25196185002766DF /* LeanUIKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EA2EE7C22184E4F000ED4BD0 /* LeanUIKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA2EE7CB2184E4F000ED4BD0 /* Build configuration list for PBXNativeTarget "LeanUIKit" */;
@@ -142,9 +222,13 @@
 		EA2EE7BA2184E4F000ED4BD0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Gonzalo Reyes Huertas";
 				TargetAttributes = {
+					840F578A25196185002766DF = {
+						CreatedOnToolsVersion = 12.0;
+					};
 					EA2EE7C22184E4F000ED4BD0 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1000;
@@ -164,11 +248,23 @@
 			projectRoot = "";
 			targets = (
 				EA2EE7C22184E4F000ED4BD0 /* LeanUIKit */,
+				840F578A25196185002766DF /* LeanUIKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		840F578925196185002766DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840F57BE251962BB002766DF /* horizontal_constraints in Resources */,
+				840F57BD251962BB002766DF /* error_constraints in Resources */,
+				840F57BF251962BB002766DF /* dimension_constraints in Resources */,
+				840F57BC251962BB002766DF /* vertical_constraints in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA2EE7C12184E4F000ED4BD0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -179,6 +275,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		840F578725196185002766DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840F57A525196211002766DF /* LayoutBuilderTestCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA2EE7BF2184E4F000ED4BD0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,7 +304,55 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		840F579225196185002766DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA2EE7C22184E4F000ED4BD0 /* LeanUIKit */;
+			targetProxy = 840F579125196185002766DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		840F579425196185002766DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4D3BQQ6A8Z;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.platform.LeanUIKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		840F579525196185002766DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4D3BQQ6A8Z;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.platform.LeanUIKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		EA2EE7C92184E4F000ED4BD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -381,6 +533,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		840F579325196185002766DF /* Build configuration list for PBXNativeTarget "LeanUIKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				840F579425196185002766DF /* Debug */,
+				840F579525196185002766DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EA2EE7BD2184E4F000ED4BD0 /* Build configuration list for PBXProject "LeanUIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

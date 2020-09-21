@@ -1,0 +1,26 @@
+# a view that does not exist
+viewThatDoesNotExist.left = s
+l.left = viewThatDoesNotExist
+
+# an invalid attribute
+l.anchorThatDoesNotExist = s
+l.left = l.anchorThatDoesNotExist
+
+# an invalid relation
+l.left # s
+l.left $ s
+l.left % s
+
+# an invalid format
+l.left = l2.right+16
+l.left = l2.right +16
+
+# an invalid operator
+l.height = s.height / 2
+
+# a trailing operator
+l.height = s + aString
+
+# invalid constraints
+l.lead = 10
+l.lead = l.top

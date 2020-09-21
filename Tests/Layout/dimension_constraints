@@ -1,0 +1,7 @@
+l.width = s - 100
+l2.width = l
+l3.width = l * 0.5
+
+l.height = l.width
+l2.height = 44
+l3.height = l * 0.5
