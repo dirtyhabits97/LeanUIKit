@@ -47,6 +47,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		844C9D2F2519601F000D49DD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EA2EE7CF2184E73900ED4BD0 /* UITextField+Extensions.swift */,
+				EA2EE7D12184E7B800ED4BD0 /* UITextView+Extensions.swift */,
+				EA2EE7D52184E82400ED4BD0 /* UIColor+Extensions.swift */,
+				EA2EE7D72184E88F00ED4BD0 /* UIButton+Extensions.swift */,
+				EA6CB4EA21D1B92D00B013F5 /* UIImage+Extensions.swift */,
+				EA6CB4EC21D1BB0F00B013F5 /* UIImageView+Extensions.swift */,
+				EA2EE7DE2184E9BE00ED4BD0 /* UIViewController+Extensions.swift */,
+				D617684E2274AFDE0018D38E /* UINavigationController+Extensions.swift */,
+				D617686722754C640018D38E /* UITabBarController+Extensions.swift */,
+				EA2EE7E22184EAFC00ED4BD0 /* NSAttributedString+Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		EA2EE7B92184E4F000ED4BD0 = {
 			isa = PBXGroup;
 			children = (
@@ -76,16 +93,7 @@
 		EA2EE7CE2184E5B700ED4BD0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				EA2EE7CF2184E73900ED4BD0 /* UITextField+Extensions.swift */,
-				EA2EE7D12184E7B800ED4BD0 /* UITextView+Extensions.swift */,
-				EA2EE7D52184E82400ED4BD0 /* UIColor+Extensions.swift */,
-				EA2EE7D72184E88F00ED4BD0 /* UIButton+Extensions.swift */,
-				EA6CB4EA21D1B92D00B013F5 /* UIImage+Extensions.swift */,
-				EA6CB4EC21D1BB0F00B013F5 /* UIImageView+Extensions.swift */,
-				EA2EE7DE2184E9BE00ED4BD0 /* UIViewController+Extensions.swift */,
-				D617684E2274AFDE0018D38E /* UINavigationController+Extensions.swift */,
-				D617686722754C640018D38E /* UITabBarController+Extensions.swift */,
-				EA2EE7E22184EAFC00ED4BD0 /* NSAttributedString+Extensions.swift */,
+				844C9D2F2519601F000D49DD /* Helpers */,
 			);
 			path = Source;
 			sourceTree = "<group>";
