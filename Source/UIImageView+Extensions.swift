@@ -10,6 +10,12 @@ import UIKit
 
 public extension UIImageView {
     
+    /**
+     Applies `alpha` to `UIImageView.image`
+     
+     - Parameters:
+        - alpha: the alpha component to apply.
+     */
     func apply(alpha: CGFloat) {
         image = image?.applying(alpha: alpha)
     }
