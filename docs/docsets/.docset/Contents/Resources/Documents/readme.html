@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>README  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="README  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+           Docs
+        </a>
+         (86% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/dirtyhabits97">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html"> Reference</a>
+      <img class="carat" src="img/carat.png" />
+      README  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="readme.html">README</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/LayoutBuilder.html">LayoutBuilder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/NSAttributedString.html">NSAttributedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/NSMutableAttributedString.html">NSMutableAttributedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UIButton.html">UIButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UIColor.html">UIColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UIImageView.html">UIImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UINavigationController.html">UINavigationController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UITabBarController.html">UITabBarController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UITextField.html">UITextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UITextField/KeyboardStyle.html">– KeyboardStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UITextView.html">UITextView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UIViewController.html">UIViewController</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            
+            <h1 id='leanuikit' class='heading'>LeanUIKit</h1>
+
+<p><a href="https://github.com/realm/jazzy"><img src="./docs/badge.svg" alt="Jazzy"></a></p>
+
+<p>UIKit based framework with helpers that reduce boilerplate code and help to better configure views.</p>
+<h2 id='table-of-contents' class='heading'>Table of Contents</h2>
+
+<ul>
+<li><a href="#Requirements">Requirements</a></li>
+<li><a href="#Usage">Usage</a></li>
+<li><a href="#Author">Author</a></li>
+</ul>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 11.0+</li>
+<li>Xcode 11+</li>
+<li>Swift 5.1+</li>
+</ul>
+<h2 id='usage' class='heading'>Usage</h2>
+<h3 id='helpers' class='heading'>Helpers</h3>
+
+<p>Check the jazzy docs to get an idea of the helpers in this project.</p>
+<h3 id='layout-builder' class='heading'>Layout Builder</h3>
+
+<p>Create a constraints file in your project. You can look at:</p>
+
+<ul>
+<li>Tests/Layout/dimension_constraints</li>
+<li>Tests/Layout/horizontal_constraints</li>
+<li>Tests/Layout/vertical_constraints</li>
+</ul>
+
+<p>Avoid the constraint mistakes in:</p>
+
+<ul>
+<li>Tests/Layout/error_constraints</li>
+</ul>
+
+<p>Pass the <code>URL</code> to your constraint file (not the one in the <code>Bundle</code>, but to the file in your machine):</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">builder</span> <span class="o">=</span> <span class="kt">LayoutBuilder</span><span class="p">(</span><span class="nv">fileURL</span><span class="p">:</span> <span class="n">urlToMyFile</span><span class="p">,</span> <span class="nv">views</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span>
+<span class="n">builder</span><span class="o">.</span><span class="nf">build</span><span class="p">(</span><span class="nv">onChange</span><span class="p">:</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="k">in</span>
+    <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">parentView</span><span class="o">.</span><span class="nf">updateConstraintsIfNeeded</span><span class="p">()</span>
+<span class="p">})</span>
+</code></pre>
+
+<p>Whenever you save your file, the constraints will be updated.</p>
+<h2 id='author' class='heading'>Author</h2>
+
+<ul>
+<li><a href="https://github.com/dirtyhabits97">Gonzalo RH</a></li>
+</ul>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external">Gonzalo RH</a>. All rights reserved. (Last updated: 2020-09-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

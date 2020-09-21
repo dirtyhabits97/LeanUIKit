@@ -1,0 +1,40 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/digital008/personal projects/LeanUIKit/Sources/Helpers/UITextField+Extensions.swift",
+      "line": 46,
+      "symbol": "UITextField.KeyboardStyle.email",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/digital008/personal projects/LeanUIKit/Sources/Helpers/UITextField+Extensions.swift",
+      "line": 47,
+      "symbol": "UITextField.KeyboardStyle.password",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/digital008/personal projects/LeanUIKit/Sources/Helpers/UITextField+Extensions.swift",
+      "line": 48,
+      "symbol": "UITextField.KeyboardStyle.numbers",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/digital008/personal projects/LeanUIKit/Sources/Helpers/UITextField+Extensions.swift",
+      "line": 49,
+      "symbol": "UITextField.KeyboardStyle.phonenumber",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/digital008/personal projects/LeanUIKit/Sources/Helpers/UITextField+Extensions.swift",
+      "line": 50,
+      "symbol": "UITextField.KeyboardStyle.normal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/digital008/personal projects/LeanUIKit"
+}

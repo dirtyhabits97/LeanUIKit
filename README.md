@@ -1,4 +1,5 @@
 # LeanUIKit
+[![Jazzy](./docs/badge.svg)](https://github.com/realm/jazzy)
 
 UIKit based framework with helpers that reduce boilerplate code and help to better configure views.
 
@@ -41,4 +42,4 @@ Whenever you save your file, the constraints will be updated.
 
 ## Author
 
-* [Gonzalo Reyes Huertas](https://github.com/dirtyhabits97)
+* [Gonzalo RH](https://github.com/dirtyhabits97)
