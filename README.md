@@ -1,4 +1,6 @@
 # LeanUIKit
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-4BC51D.svg?style=flat)](https://swift.org/package-manager/)
 [![Jazzy](./docs/badge.svg)](https://github.com/realm/jazzy)
 
 UIKit based framework with helpers that reduce boilerplate code and help to better configure views.
